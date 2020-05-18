@@ -6,10 +6,19 @@
     <description>Recent content in development on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/TheDavidChen.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test Post 1</title>
+      <link>/TheDavidChen.github.io/post/test-post-1/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/TheDavidChen.github.io/post/test-post-1/</guid>
+      <description>This is my first test post!</description>
+    </item>
     
     <item>
       <title>Hugo coder wiki</title>
