@@ -21,13 +21,12 @@
     </item>
     
     <item>
-      <title>About Me</title>
+      <title>About</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>This is another work in progress.
-In the meantime, feel free to add me on LinkedIn!</description>
+      <description>About Me Welcome, my name is David Chen. Put simply, I love sharing statistics and analytics with those around me. Currently I work as a Research Assistant within the Statistics Department, and (during the academic year) as a research consultant for the Data Learning Center within the University Libraries. I will be graduating with my master&amp;rsquo;s in applied statistics and my bachelor&amp;rsquo;s in statistics (computer science option) in May 2021.</description>
     </item>
     
     <item>
