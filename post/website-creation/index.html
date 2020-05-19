@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="David Chen">
+    <meta name="description" content="In this post, I will explain how I created this website. This will include what resources I used, how I combined blogdown in R with GitHub Pages, and the various changes required for it to function correctly.
+I will assume the user has already created a github.io page and linked GitHub and RStudio. I will assume familiarity with GitHub and R in general.
+If the two assumptions are met, and the user does not spend too long choosing themes, the basic setup should not take more than 20 minutes.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Website Creation"/>
+<meta name="twitter:description" content="In this post, I will explain how I created this website. This will include what resources I used, how I combined blogdown in R with GitHub Pages, and the various changes required for it to function correctly.
+I will assume the user has already created a github.io page and linked GitHub and RStudio. I will assume familiarity with GitHub and R in general.
+If the two assumptions are met, and the user does not spend too long choosing themes, the basic setup should not take more than 20 minutes."/>
+
+    <meta property="og:title" content="Website Creation" />
+<meta property="og:description" content="In this post, I will explain how I created this website. This will include what resources I used, how I combined blogdown in R with GitHub Pages, and the various changes required for it to function correctly.
+I will assume the user has already created a github.io page and linked GitHub and RStudio. I will assume familiarity with GitHub and R in general.
+If the two assumptions are met, and the user does not spend too long choosing themes, the basic setup should not take more than 20 minutes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/website-creation/" />
+<meta property="article:published_time" content="2020-05-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-18T00:00:00+00:00" />
+
+
+    
+      <base href="/post/website-creation/">
+    
+    <title>
+  Website Creation · David Chen
+</title>
+
+    
+      <link rel="canonical" href="/post/website-creation/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.e78e80fc3a585a4d1c8fc7f58623b6ff852411e38431a9cd1792877ecaa160f6.css" integrity="sha256-546A/DpYWk0cj8f1hiO2/4UkEeOEManNF5KHfsqhYPY=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.70.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Chen
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/post/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Website Creation</h1>
+    </header>
+
+    
+
+
+<p>In this post, I will explain how I created this website. This will include what resources I used, how I combined <code>blogdown</code> in R with GitHub Pages, and the various changes required for it to function correctly.</p>
+<p>I will assume the user has already created a <a href="https://pages.github.com/">github.io page</a> and <a href="https://happygitwithr.com/rstudio-git-github.html">linked GitHub and RStudio</a>. I will assume familiarity with GitHub and R in general.</p>
+<p>If the two assumptions are met, and the user does not spend too long choosing themes, the basic setup should not take more than 20 minutes. If the user decides to read through the documentation, it may take 1-3 hours.</p>
+<div id="general-resourcesintroduction" class="section level1">
+<h1>General Resources/Introduction</h1>
+<p>There are countless ways of creating and maintaining websites, so why this one? For me, R integration was paramount, so I ended up with the <code>blogdown</code> package. The choice of GitHub Pages over other sites such as Netlify was simply because I wanted everything to stay integrated with GitHub.</p>
+<p><code>blogdown</code> is an incredible R Package that makes website creation and blogging extremely simple. The documentation (and guide) can be found at the following site: <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>. I highly recommend reading through it to understand exactly what is going on and what optional settings there are.</p>
+<p>Additionally, I referenced the tutorial created by <a href="https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html">Emily C. Zabor</a> for an example on GitHub integration.</p>
+</div>
+<div id="website-creation" class="section level1">
+<h1>Website creation</h1>
+<p>The following steps are essentially a summary of the two resources above, but condensed into a list format and made specific to RStudio/GitHub.</p>
+<ol style="list-style-type: decimal">
+<li>Create an empty folder (I will name as <code>Website</code>) on your local computer.</li>
+<li>Create a new GitHub repo (not for the github.io page) that we will use to maintain the backend website creation and maintenance. I have this named as <code>WebsiteBackend</code>, although the previous resources refer to this repo as <code>Source</code>.</li>
+<li>Link it to RStudio, storing in the <code>Webste</code> folder.<br />
+</li>
+<li>Find your desired Hugo Theme: <a href="https://themes.gohugo.io/" class="uri">https://themes.gohugo.io/</a>, and locate the GitHub source (for example, for Coder it would be ‘luizdepra/hugo-coder’, the end of the URL).</li>
+<li>Run the following code in R: <code>blogdown::new_site(theme = 'luizdepra/hugo-coder')</code>, but with your desired theme.</li>
+</ol>
+<p><em>Note: if there are additional files in the R Project, this code may not function as intended. Remove files as necessary.</em></p>
+<ol start="6" style="list-style-type: decimal">
+<li>In <code>config.toml</code> add these two lines of code if they are not present:</li>
+</ol>
+<ul>
+<li><code>ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]</code></li>
+<li><code>publishDir = "../username.github.io"</code>, where ‘username’ refers your GitHub username.</li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>Connect the github.io repo to the <code>Website</code> folder.</li>
+<li>Enter the following R code into the github.io repo: <code>file.create('.nojekyll')</code>.</li>
+</ol>
+<p>Now, whenever you want to update the website or create/edit a post, do so in your <code>WebsiteBackend</code> repo. Afterwards, the output will appear in the <code>username.github.io</code> repo/website automatically.</p>
+<p>To see how to create posts, see <code>blogdown::serve_site()</code> and <code>blogdown::new_post()</code> in <a href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">section 1.3 of the documentation</a>.</p>
+</div>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Work in Progress</p>
+      
+      
+        ©
+        
+        2020
+         David Chen 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>
