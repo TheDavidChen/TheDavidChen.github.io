@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Test Post 1</title>
-      <link>/post/test-post-1/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/test-post-1/</guid>
-      <description>This is my first test post!</description>
-    </item>
-    
-    <item>
       <title>Website Creation</title>
       <link>/post/website-creation/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
