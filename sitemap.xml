@@ -55,10 +55,6 @@
   </url>
   
   <url>
-    <loc>/projects/</loc>
-  </url>
-  
-  <url>
     <loc>/snippets/second/</loc>
   </url>
   
@@ -68,6 +64,10 @@
   
   <url>
     <loc>/snippets/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
   </url>
   
 </urlset>

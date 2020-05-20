@@ -51,15 +51,6 @@ pwd </description>
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/</guid>
-      <description>Work in progress, check in again in the future!</description>
-    </item>
-    
-    <item>
       <title>Second snippet</title>
       <link>/snippets/second/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -67,6 +58,16 @@ pwd </description>
       <guid>/snippets/second/</guid>
       <description>This content is in snippets/second/index.md
 ls -la </description>
+    </item>
+    
+    <item>
+      <title>Upcoming Projects</title>
+      <link>/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>While this website is still under development, here we will list planned changes/posts.
+Website  Dark/light mode button Clean back-end and extraneous folders/links Filter posts based on tags Comments Google analytics Infinite scrolling for recent posts  Statistics!  Stochastic processes Analysis of likert-type scale data Multilevel/hierarchical models Time Series  Insights / Data Viz  NFL free agent movement Safely returning to college campuses  </description>
     </item>
     
   </channel>
