@@ -6,15 +6,24 @@
     <description>Recent content in Categories on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>General</title>
+      <link>/categories/general/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Website</title>
       <link>/categories/website/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/website/</guid>
       <description></description>

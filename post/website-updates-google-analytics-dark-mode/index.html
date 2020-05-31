@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="David Chen">
+    <meta name="description" content="Google AnalyticsAs someone who adores stats, we of course need to set up stats for the website! Google analytics provides a free service that provides fairly detailed metrics on website performance. These statistics include:
+Number of usersHow long users stay on the websiteHow users are acquiredUser retentionGeographical location of usersGeneral user behaviorSetup was extremely simple. After a quick registration where you provide the website URL and select privacy options, the google analytics account is created.">
+    <meta name="keywords" content="Statistics, modeling, visualization, viz, personal website, data">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Website Updates - Google Analytics and Dark Mode (WIP)"/>
+<meta name="twitter:description" content="Google AnalyticsAs someone who adores stats, we of course need to set up stats for the website! Google analytics provides a free service that provides fairly detailed metrics on website performance. These statistics include:
+Number of usersHow long users stay on the websiteHow users are acquiredUser retentionGeographical location of usersGeneral user behaviorSetup was extremely simple. After a quick registration where you provide the website URL and select privacy options, the google analytics account is created."/>
+
+    <meta property="og:title" content="Website Updates - Google Analytics and Dark Mode (WIP)" />
+<meta property="og:description" content="Google AnalyticsAs someone who adores stats, we of course need to set up stats for the website! Google analytics provides a free service that provides fairly detailed metrics on website performance. These statistics include:
+Number of usersHow long users stay on the websiteHow users are acquiredUser retentionGeographical location of usersGeneral user behaviorSetup was extremely simple. After a quick registration where you provide the website URL and select privacy options, the google analytics account is created." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/website-updates-google-analytics-dark-mode/" />
+<meta property="article:published_time" content="2020-05-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-23T00:00:00+00:00" />
+
+
+    
+      <base href="/post/website-updates-google-analytics-dark-mode/">
+    
+    <title>
+  Website Updates - Google Analytics and Dark Mode (WIP) · David Chen
+</title>
+
+    
+      <link rel="canonical" href="/post/website-updates-google-analytics-dark-mode/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.e78e80fc3a585a4d1c8fc7f58623b6ff852411e38431a9cd1792877ecaa160f6.css" integrity="sha256-546A/DpYWk0cj8f1hiO2/4UkEeOEManNF5KHfsqhYPY=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.70.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      
+
+
+
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Chen
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/post/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/projects/">Upcoming Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Website Updates - Google Analytics and Dark Mode (WIP)</h1>
+    </header>
+
+    
+
+
+<div id="google-analytics" class="section level2">
+<h2>Google Analytics</h2>
+<p>As someone who adores stats, we of course need to set up stats for the website! Google analytics provides a free service that provides fairly detailed metrics on website performance. These statistics include:</p>
+<ul>
+<li>Number of users</li>
+<li>How long users stay on the website</li>
+<li>How users are acquired</li>
+<li>User retention</li>
+<li>Geographical location of users</li>
+<li>General user behavior</li>
+</ul>
+<p>Setup was extremely simple. After a quick registration where you provide the website URL and select privacy options, the google analytics account is created. In <code>blogdown</code>, the R package used for this website, simply scroll to the config.toml website and include the following code:</p>
+<p><code>googleAnalytics = ""</code></p>
+<p>Where the quotation marks is the tracking ID.</p>
+<p>That’s it. We now have stats!</p>
+</div>
+<div id="light-dark-mode-button-wip" class="section level2">
+<h2>Light / Dark Mode Button (WIP)</h2>
+<p>Currently, the website defaults to the browser preference for light and dark mode. Let’s give users more autonomy in their choice.</p>
+<p>First, let’s review how other themes include this option. From the Academia Hugo theme, we can navigate to <code>/layouts/partials/navbar.html</code>. There, we find the following HTML code:</p>
+<pre><code>{{ if site.Params.day_night }}
+&lt;li class=&quot;nav-item&quot;&gt;
+  &lt;a class=&quot;nav-link js-dark-toggle&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fas fa-moon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/li&gt;
+{{ end }}</code></pre>
+<p><code>day_night</code> is a (boolean) parameter specified in cofig.toml, where TRUE enables the toggle button. The rest of the classes seem self explanatory, but may not appear in the coder theme configuration. Let’s investigate what we have as the defaults.</p>
+<p>In our hugo-coder theme, we navigate to /layouts/partials/header.html. Immediately at the top, we notice the following code:</p>
+<pre><code>{{ if or .Site.Menus.main .Site.IsMultiLingual }}
+&lt;input type=&quot;checkbox&quot; id=&quot;menu-toggle&quot; /&gt;
+&lt;label class=&quot;menu-button float-right&quot; for=&quot;menu-toggle&quot;&gt;&lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;&lt;/label&gt;</code></pre>
+<p>It seems that there was a menu-toggle option already. Since our website is not going to be multilingual, perhaps we can just modify this for the light/night mode toggle.</p>
+<p>First, let’s add the <code>day_night</code> parameter to config.toml. Originally, we simply had a <code>colorscheme</code> parameter which sets the color to “dark”, “light”, and “auto”, where auto is what we currently have (defaults to browser preference).</p>
+<p>If we can just add a button to the navigation bar that changes the <code>colorscheme</code> parameter, we are set!</p>
+<p>(to be continued)</p>
+</div>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Work in Progress</p>
+      
+      
+        ©
+        
+        2020
+         David Chen 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-167444525-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+    
+
+  </body>
+
+</html>
