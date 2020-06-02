@@ -6,10 +6,20 @@
     <description>Recent content in Posts on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Resources to Learn R</title>
+      <link>/post/resources-to-learn-r/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/resources-to-learn-r/</guid>
+      <description>Throughout the school year, and especially while working as a statistical consultant, people would often ask me about how I learned to program in R. Since my answer of: “trial and error, practice, and classes” was insufficient for just about everyone, I wanted to compile a few resources here.
+Just as a quick note, just about any programming experience will help you in R as well. Concepts in languages such as Python and Java will directly transfer over to R.</description>
+    </item>
     
     <item>
       <title>Day 0 - 66 Days To Build A Habit</title>

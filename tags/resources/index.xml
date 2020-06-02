@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>General on David Chen</title>
-    <link>/categories/general/</link>
-    <description>Recent content in General on David Chen</description>
+    <title>Resources on David Chen</title>
+    <link>/tags/resources/</link>
+    <description>Recent content in Resources on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/resources/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <guid>/post/resources-to-learn-r/</guid>
       <description>Throughout the school year, and especially while working as a statistical consultant, people would often ask me about how I learned to program in R. Since my answer of: “trial and error, practice, and classes” was insufficient for just about everyone, I wanted to compile a few resources here.
 Just as a quick note, just about any programming experience will help you in R as well. Concepts in languages such as Python and Java will directly transfer over to R.</description>
-    </item>
-    
-    <item>
-      <title>Day 0 - 66 Days To Build A Habit</title>
-      <link>/post/day-0-66-days-to-build-a-habit/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/day-0-66-days-to-build-a-habit/</guid>
-      <description>66 days.
-In a 2009 study by Lally et al. (2009), researchers found that their study of 96 individuals took on average 66 days to truly form a habit. While the amount of time varied from 18 to 254 days, 66 gives us a definitive number to work towards.
-Change has, and always will be difficult. It takes dedication, intention, and a commitment to breaking old habits, even when it becomes painful.</description>
     </item>
     
   </channel>
