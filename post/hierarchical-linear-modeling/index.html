@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="David Chen">
+    <meta name="description" content="Friendly reminder that I am a student, and not a professional in the field. Please review the resources below before implementing the model. If there are any errors, please leave a comment/contact me and I will get it resolved immediately.
+IntroductionData often contains an inherent hierarchical nature, where some variables are nested within others.
+A common example is student education. The data could be broken up into the following levels (example from (Woltman et al.">
+    <meta name="keywords" content="Statistics, modeling, visualization, viz, personal website, data">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hierarchical Linear Modeling"/>
+<meta name="twitter:description" content="Friendly reminder that I am a student, and not a professional in the field. Please review the resources below before implementing the model. If there are any errors, please leave a comment/contact me and I will get it resolved immediately.
+IntroductionData often contains an inherent hierarchical nature, where some variables are nested within others.
+A common example is student education. The data could be broken up into the following levels (example from (Woltman et al."/>
+
+    <meta property="og:title" content="Hierarchical Linear Modeling" />
+<meta property="og:description" content="Friendly reminder that I am a student, and not a professional in the field. Please review the resources below before implementing the model. If there are any errors, please leave a comment/contact me and I will get it resolved immediately.
+IntroductionData often contains an inherent hierarchical nature, where some variables are nested within others.
+A common example is student education. The data could be broken up into the following levels (example from (Woltman et al." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/hierarchical-linear-modeling/" />
+<meta property="article:published_time" content="2020-06-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-02T00:00:00+00:00" />
+
+
+    
+      <base href="/post/hierarchical-linear-modeling/">
+    
+    <title>
+  Hierarchical Linear Modeling · David Chen
+</title>
+
+    
+      <link rel="canonical" href="/post/hierarchical-linear-modeling/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.e78e80fc3a585a4d1c8fc7f58623b6ff852411e38431a9cd1792877ecaa160f6.css" integrity="sha256-546A/DpYWk0cj8f1hiO2/4UkEeOEManNF5KHfsqhYPY=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.70.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      
+
+
+
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Chen
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/post/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/projects/">Upcoming Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Hierarchical Linear Modeling</h1>
+    </header>
+
+    
+
+
+<p><em>Friendly reminder that I am a student, and not a professional in the field. Please review the resources below before implementing the model. If there are any errors, please leave a comment/contact me and I will get it resolved immediately.</em></p>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Data often contains an inherent hierarchical nature, where some variables are nested within others.</p>
+<p>A common example is student education. The data could be broken up into the following levels (example from <a href="http://www.tqmp.org/RegularArticles/vol08-1/p052/">(Woltman et al., 2012)</a>):</p>
+<ol style="list-style-type: decimal">
+<li>Individual students (IQ, GPA, Gender)</li>
+<li>Classroom (Teacher experience, class size)</li>
+<li>School (Geographical location, budget)</li>
+</ol>
+<p>Here, students (level 1) are nested within classrooms (level 2), which are then nested within schools (level 3). One can immediately imagine this extending to an even greater number of levels if we consider school district, country region, or other grouping variables.</p>
+<p>From the paper, the following sample hypothesis was provided:</p>
+<blockquote>
+<p>What school-, classroom-, and
+student-related factors influence students’ Grade Point Average?</p>
+</blockquote>
+<p>With Hierarchical Linear Modeling (HLM), we can account for and investigate the relationships between and within hierarchical levels.</p>
+</div>
+<div id="naive-approach" class="section level2">
+<h2>Naive approach</h2>
+<p>What if we just pretend the hierarchical nature doesn’t exist, and we just continue with a basic regression?</p>
+<p>If there are substantial differences at higher levels, it seems that ignoring the hierarchical nature may lead to behavior extremely similar to the <a href="https://ftp.cs.ucla.edu/pub/stat_ser/r414.pdf">Simpson’s Paradox</a>. Naive models may show a strong positive correlation, yet including the multilevel nature may show a strong negative correlation. Similar to including an additional variable to show the true nature of a variable in Simpson’s paradox, HLM creates new intercepts for each higher-level grouping (at least in 2-level models).</p>
+<p>Additionally, suppose that individuals within higher-level groups are correlated with each other. Immediately, this breaks the independence condition of simple regressions.</p>
+<p>If one decides to aggregate the data to a higher level (i.e. instead of taking individual data we average it to the classroom level), we risk losing variability caused by individuals, potentially completely changing relationships between variables.</p>
+<p>We do note that if the higher level variables are non-significant, simple regressions should be sufficient. This condition can be tested for via ANOVA.</p>
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<p><a href="(http://www.tqmp.org/RegularArticles/vol08-1/p052/p052.pdf)"><em>An introduction to hierarchical linear modeling</em></a> by Woltman et al., 2002</p>
+<p><a href="https://files.eric.ed.gov/fulltext/ED545279.pdf">Hierarchical Linear Modeling (HLM):
+An Introduction to Key Concepts Within
+Cross-Sectional and Growth Modeling
+Frameworks</a> by Daniel Anderson, 2012</p>
+</div>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Work in Progress</p>
+      
+      
+        ©
+        
+        2020
+         David Chen 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-167444525-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+    
+
+  </body>
+
+</html>
