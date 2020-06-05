@@ -6,10 +6,21 @@
     <description>Recent content in Statistics on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A/B Testing</title>
+      <link>/post/a-b-testing/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-b-testing/</guid>
+      <description>Friendly reminder that I am a student, and not a professional in the field. Please review the resources below before implementing the model. If there are any errors, please leave a comment/contact me and I will get it resolved immediately.
+IntroductionA/B testing. If you’re a student like me, you probably have never heard of it before in your statistics classes before. It sounds fancy. It sounds complex.
+It’s neither of those.</description>
+    </item>
     
     <item>
       <title>Hierarchical Linear Modeling</title>
