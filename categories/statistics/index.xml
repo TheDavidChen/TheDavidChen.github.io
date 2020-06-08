@@ -6,10 +6,20 @@
     <description>Recent content in Statistics on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Time Series - AR(1) Introduction</title>
+      <link>/post/time-series-ar1/</link>
+      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/time-series-ar1/</guid>
+      <description>Friendly reminder that I am a student, and not a professional in the field. Please review the resources below before implementing the model. If there are any errors, please leave a comment/contact me and I will get it resolved immediately.
+IntroductionTimes series. Simply put, when data is collected repeatedly over time, it often becomes a time series problem. It is extremely commonly used in academia and in industry, as this analysis can forecast future values, explain how the past influences the future, and highlight changes over time.</description>
+    </item>
     
     <item>
       <title>A/B Testing</title>
