@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="David Chen">
+    <meta name="description" content="The use of projects (.Rproj files) is fundamental to organized coding and project management, and should be used essentially 100% of the time while using RStudio. Thus in this post, we will discuss why you should use projects, how to create them, and some organization standards.
+Why Use It?In my opinion, there are four fundamental reasons why you should use projects:
+It can take &lt;20 seconds to set up.">
+    <meta name="keywords" content="Statistics, modeling, visualization, viz, personal website, data">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="R/Rstudio - Why Use Projects?"/>
+<meta name="twitter:description" content="The use of projects (.Rproj files) is fundamental to organized coding and project management, and should be used essentially 100% of the time while using RStudio. Thus in this post, we will discuss why you should use projects, how to create them, and some organization standards.
+Why Use It?In my opinion, there are four fundamental reasons why you should use projects:
+It can take &lt;20 seconds to set up."/>
+
+    <meta property="og:title" content="R/Rstudio - Why Use Projects?" />
+<meta property="og:description" content="The use of projects (.Rproj files) is fundamental to organized coding and project management, and should be used essentially 100% of the time while using RStudio. Thus in this post, we will discuss why you should use projects, how to create them, and some organization standards.
+Why Use It?In my opinion, there are four fundamental reasons why you should use projects:
+It can take &lt;20 seconds to set up." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/r-why-use-projects/" />
+<meta property="article:published_time" content="2020-06-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-17T00:00:00+00:00" />
+
+
+    
+      <base href="/post/r-why-use-projects/">
+    
+    <title>
+  R/Rstudio - Why Use Projects? · David Chen
+</title>
+
+    
+      <link rel="canonical" href="/post/r-why-use-projects/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.e78e80fc3a585a4d1c8fc7f58623b6ff852411e38431a9cd1792877ecaa160f6.css" integrity="sha256-546A/DpYWk0cj8f1hiO2/4UkEeOEManNF5KHfsqhYPY=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.70.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      
+
+
+
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Chen
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/post/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/projects/">Upcoming Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>R/Rstudio - Why Use Projects?</h1>
+    </header>
+
+    
+
+
+<p>The use of projects (.Rproj files) is fundamental to organized coding and project management, and should be used essentially 100% of the time while using RStudio. Thus in this post, we will discuss why you should use projects, how to create them, and some organization standards.</p>
+<div id="why-use-it" class="section level1">
+<h1>Why Use It?</h1>
+<p>In my opinion, there are four fundamental reasons why you should use projects:</p>
+<ol style="list-style-type: decimal">
+<li>It can take &lt;20 seconds to set up.</li>
+<li>Keeps all relevant files in the same place.</li>
+<li>Sets the working directory so you can use relative paths.</li>
+<li>Allows for version control.</li>
+</ol>
+<p>In the same way that you might make a unique folder for each class and store all the relevant homework assignments, lecture notes, and slides in, you can create an R project for each unique assignment you take on. By storing all your relevant code, scripts, data, and output in the same project/directory/folder, you can keep everything organized and isolated from irrelevant documents.</p>
+</div>
+<div id="creating-the-project" class="section level1">
+<h1>Creating the Project</h1>
+<p>How long does it take to create a .Rproj? However long it takes for you to decide the folder name and where it should be stored on your computer.</p>
+<p>Here’s a simple tutorial on how to create a project:</p>
+<ol style="list-style-type: decimal">
+<li>Click the project icon on the top right corner of RStudio. (Note: If this cannot be found, go to the taskbar and click <code>File</code> -&gt; <code>New Project</code>.)</li>
+</ol>
+<div class="figure">
+<img src="/post/2020-06-17-r-why-use-projects_files/Project%20Location.png" alt="Location of the project icon" />
+<p class="caption">Location of the project icon</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Select <code>New Project</code>.</li>
+</ol>
+<div class="figure">
+<img src="/post/2020-06-17-r-why-use-projects_files/SelectNewProject.PNG" alt="Location of the “New Project” button." />
+<p class="caption">Location of the “New Project” button.</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Select <code>New Directory</code>.</li>
+</ol>
+<div class="figure">
+<img src="/post/2020-06-17-r-why-use-projects_files/SelectNewDirectory.png" alt="Creation of a new directory." />
+<p class="caption">Creation of a new directory.</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Select <code>New Project</code>.</li>
+</ol>
+<div class="figure">
+<img src="/post/2020-06-17-r-why-use-projects_files/SelectNewProject2.png" alt="Selecting the project type. Certain packages will bring up additional options worth consideration." />
+<p class="caption">Selecting the project type. Certain packages will bring up additional options worth consideration.</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Type the desired name of the project under <code>Directory Name</code>, and select where you want this to be saved under <code>Create project as subdirectory of</code>.</li>
+</ol>
+<div class="figure">
+<img src="/post/2020-06-17-r-why-use-projects_files/DirectoryName.PNG" alt="Directory name and local save location." />
+<p class="caption">Directory name and local save location.</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Press Submit.</li>
+</ol>
+<p>Congratulations, you are done! There are additional steps you can take to incorporate version control, but these are the fundamental basics. Now, you can create files normally (e.g. R scripts, RMarkdown, etc.) , and they’ll be stored within this project directory.</p>
+</div>
+<div id="accessing-the-project-after-creation" class="section level1">
+<h1>Accessing the Project After Creation</h1>
+<p>After a project has been created, one can reopen the project by doing the following:</p>
+<ol style="list-style-type: decimal">
+<li><p>Click the Project icon on the top right of RStudio.</p></li>
+<li><p>Select <code>Open Project</code> and locate where the .Rproj file is located. If the project was opened recently, it will appear in the dropdown menu immediately.</p></li>
+</ol>
+</div>
+<div id="applying-the-benefits" class="section level1">
+<h1>Applying the Benefits</h1>
+<p>As mentioned previously, creating a project “sets the working directory so you can use relative paths.” Let’s clarify what this means.</p>
+<p>Without the use of projects, you may have run into issues with the working directory.</p>
+<p>Previously, while trying to load in a dataset, you may have run into errors like the following:</p>
+<style type="text/css">
+.standard {
+  background-color: lightgray;
+  font-weight: bold;
+  color:black
+}
+</style>
+<style type="text/css">
+.out {
+  background-color: gray;
+  font-weight: bold;
+  color:black
+}
+</style>
+<pre class="r standard"><code>read.csv(&#39;Dataset.csv&#39;)</code></pre>
+<pre><code>## Warning in file(file, &quot;rt&quot;): cannot open file &#39;Dataset.csv&#39;: No such file or
+## directory</code></pre>
+<pre><code>## Error in file(file, &quot;rt&quot;): cannot open the connection</code></pre>
+<p>Afterwards, you may have been forced to set the working directory with <code>setwd()</code>, or specified the full path to the dataset (i.e. <code>read.csv('C:/Users/Name/Desktop/RProject/Data/Dataset.csv')</code>. However, what happens when someone else tries to use your code? Then, they have to manually change the file path, and they may run into issues.</p>
+<p>Projects resolve this issue.</p>
+<p>When you use a project, the working directory is automatically set to the folder you created. So, whenever you create a file (data, scripts, figures, etc.) that is relevant to your assignment, store it in this directory. Then, if the data is stored in a <code>Data</code> folder (see example later in the post), you can use the following code:</p>
+<pre class="r standard"><code># Use of the relative path. Accesses data in the Data folder
+read.csv(&#39;./Data/Dataset.csv&#39;)</code></pre>
+<p>Note that the ‘.’ represents the current directory location. If you created a specific <code>scripts</code> folder, you may have to use ‘..’ to go up a folder first and then access the data folder. An example is shown below.</p>
+<pre class="r standard"><code># Goes up a folder first, then into the Data folder
+read.csv(&#39;../Data/Dataset.csv&#39;)</code></pre>
+<p>Since this uses relative paths (<code>./Data/Dataset.csv</code> instead of absolute path of <code>C:/Users/Name/Desktop/RProject/Data/Dataset.csv</code>), other users can immediately apply your scripts without change. This will also prevent any issues in the future if you start moving files around.</p>
+</div>
+<div id="project-organization" class="section level1">
+<h1>Project Organization</h1>
+<p>There are many different ways to organize the project directory, and thus it should be based on you and your organization’s needs.</p>
+<p>Here is a (potentially) overly-simplified example:</p>
+<div class="figure">
+<img src="/post/2020-06-17-r-why-use-projects_files/ExampleProjectStructure.PNG" alt="Example project structure, including a Data and Code folder." />
+<p class="caption">Example project structure, including a Data and Code folder.</p>
+</div>
+<p>All your data will go into the <code>Data</code> folder, all the code (R scripts, RMD, etc.) goes into the <code>Code</code> folder, and a description about the project will be written into the README.md file. The README.md file is a markdown file, and typically it discusses the purpose of the project, the versions of the programming language/packages used, and other necessary information.</p>
+</div>
+<div id="resources" class="section level1">
+<h1>Resources</h1>
+<p>To learn more about creating/using R Projects:</p>
+<ul>
+<li><a href="https://r4ds.had.co.nz/workflow-projects.html">R for Data Science - Chapter 8 - Workflow: projects</a></li>
+<li><a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">RStudio Support - Using Projects</a></li>
+</ul>
+<p>To learn about integrating version control:</p>
+<ul>
+<li><a href="https://happygitwithr.com/rstudio-git-github.html">Happy Git and GitHub for the useR</a></li>
+</ul>
+<p>Data management and organization (how should you structure folders, where do you place scripts vs plots, etc.):</p>
+<ul>
+<li><a href="https://drivendata.github.io/cookiecutter-data-science/#directory-structure">Cookiecutter Data Science - Directory Structure</a></li>
+<li><a href="https://guides.lib.berkeley.edu/c.php?g=652220&amp;p=4575532">Berkeley Library - Reproducible Research Practices: Managing Your Project</a></li>
+</ul>
+</div>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Work in Progress</p>
+      
+      
+        ©
+        
+        2020
+         David Chen 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-167444525-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on David Chen</title>
+    <link>/categories/programming/</link>
+    <description>Recent content in Programming on David Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 17 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R/Rstudio - Why Use Projects?</title>
+      <link>/post/rstudio-why-use-projects/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/rstudio-why-use-projects/</guid>
+      <description>The use of projects (.Rproj files) is fundamental to organized coding and project management, and should be used essentially 100% of the time while using RStudio. Thus in this post, we will discuss why you should use projects, how to create them, and some organization standards. We will also list a few additional resources for you to learn more about the subject at the very end.
+Why Use It?In my opinion, there are four fundamental reasons why you should use projects:</description>
+    </item>
+    
+  </channel>
+</rss>

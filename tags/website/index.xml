@@ -6,10 +6,23 @@
     <description>Recent content in Website on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 23 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/website/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Website - Highlighting Code Chunks</title>
+      <link>/post/website-highlighting-code-chunks/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/website-highlighting-code-chunks/</guid>
+      <description>Work in progress!
+Whenever we need to include functional R code, whether it’s to check the output or just see how it was written, we include code chunks. Yet, currently on this website, it is extremely difficult to differentiate from the normal text.
+Prior to this post, code chunks would appear like the following:
+Figure 1 - Code chunk that has no color differentiation
+There are three primary issues here.</description>
+    </item>
     
     <item>
       <title>Website Updates - Google Analytics and Dark Mode (WIP)</title>

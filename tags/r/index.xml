@@ -6,10 +6,33 @@
     <description>Recent content in R on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R/Rstudio - Why Use Projects?</title>
+      <link>/post/rstudio-why-use-projects/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/rstudio-why-use-projects/</guid>
+      <description>The use of projects (.Rproj files) is fundamental to organized coding and project management, and should be used essentially 100% of the time while using RStudio. Thus in this post, we will discuss why you should use projects, how to create them, and some organization standards. We will also list a few additional resources for you to learn more about the subject at the very end.
+Why Use It?In my opinion, there are four fundamental reasons why you should use projects:</description>
+    </item>
+    
+    <item>
+      <title>Website - Highlighting Code Chunks</title>
+      <link>/post/website-highlighting-code-chunks/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/website-highlighting-code-chunks/</guid>
+      <description>Work in progress!
+Whenever we need to include functional R code, whether it’s to check the output or just see how it was written, we include code chunks. Yet, currently on this website, it is extremely difficult to differentiate from the normal text.
+Prior to this post, code chunks would appear like the following:
+Figure 1 - Code chunk that has no color differentiation
+There are three primary issues here.</description>
+    </item>
     
     <item>
       <title>Resources to Learn R</title>
