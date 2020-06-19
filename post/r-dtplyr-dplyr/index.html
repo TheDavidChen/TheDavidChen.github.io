@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="David Chen">
+    <meta name="description" content="In this post, we discuss v1.0.0 of the dtplyr package and some changes made in the v1.0.0 update of dplyr. This post essentially summarizes these two posts:
+dtplyr 1.0.0 - Hadley Wickhamdplyr 1.0.0 - Hadley WickhamAs these are two short, well-written posts, I highly recommend simply reading those two posts. If not, hopefully this post will inspire you to read them afterwards.
+DtplyrSummaryIf you prefer dplyr syntax over data.">
+    <meta name="keywords" content="Statistics, modeling, visualization, viz, personal website, data">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="R - Overview of v1.0.0 of dtplyr and dplyr"/>
+<meta name="twitter:description" content="In this post, we discuss v1.0.0 of the dtplyr package and some changes made in the v1.0.0 update of dplyr. This post essentially summarizes these two posts:
+dtplyr 1.0.0 - Hadley Wickhamdplyr 1.0.0 - Hadley WickhamAs these are two short, well-written posts, I highly recommend simply reading those two posts. If not, hopefully this post will inspire you to read them afterwards.
+DtplyrSummaryIf you prefer dplyr syntax over data."/>
+
+    <meta property="og:title" content="R - Overview of v1.0.0 of dtplyr and dplyr" />
+<meta property="og:description" content="In this post, we discuss v1.0.0 of the dtplyr package and some changes made in the v1.0.0 update of dplyr. This post essentially summarizes these two posts:
+dtplyr 1.0.0 - Hadley Wickhamdplyr 1.0.0 - Hadley WickhamAs these are two short, well-written posts, I highly recommend simply reading those two posts. If not, hopefully this post will inspire you to read them afterwards.
+DtplyrSummaryIf you prefer dplyr syntax over data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/r-dtplyr-dplyr/" />
+<meta property="article:published_time" content="2020-06-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-18T00:00:00+00:00" />
+
+
+    
+      <base href="/post/r-dtplyr-dplyr/">
+    
+    <title>
+  R - Overview of v1.0.0 of dtplyr and dplyr · David Chen
+</title>
+
+    
+      <link rel="canonical" href="/post/r-dtplyr-dplyr/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.e78e80fc3a585a4d1c8fc7f58623b6ff852411e38431a9cd1792877ecaa160f6.css" integrity="sha256-546A/DpYWk0cj8f1hiO2/4UkEeOEManNF5KHfsqhYPY=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.70.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      
+
+
+
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Chen
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/post/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/projects/">Upcoming Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>R - Overview of v1.0.0 of dtplyr and dplyr</h1>
+    </header>
+
+    
+
+
+<p>In this post, we discuss v1.0.0 of the <code>dtplyr</code> package and some changes made in the v1.0.0 update of <code>dplyr</code>. This post essentially summarizes these two posts:</p>
+<ul>
+<li><a href="https://www.tidyverse.org/blog/2019/11/dtplyr-1-0-0/">dtplyr 1.0.0 - Hadley Wickham</a></li>
+<li><a href="https://www.tidyverse.org/blog/2020/03/dplyr-1-0-0-is-coming-soon/#:~:text=There%20are%20two%20important%20function,of%20any%20data%20masking%20verb.">dplyr 1.0.0 - Hadley Wickham</a></li>
+</ul>
+<p>As these are two short, well-written posts, I highly recommend simply reading those two posts. If not, hopefully this post will inspire you to read them afterwards.</p>
+<div id="dtplyr" class="section level1">
+<h1>Dtplyr</h1>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>If you prefer <code>dplyr</code> syntax over <code>data.table</code>, use <code>dtplyr</code> when the data sets start getting larger (&gt;10,000 rows). Use of <code>dtplyr</code> only requires two additional lines of code.</p>
+</div>
+<div id="implementation" class="section level2">
+<h2>Implementation</h2>
+<p>The <code>dtplyr</code> package 1.0.0 was introduced late 2019 by Hadley Wickham. As the implementation is simple, I highly recommend reading his original <a href="https://www.tidyverse.org/blog/2019/11/dtplyr-1-0-0/">blog post</a>, as it is a short read and discusses how the package works.</p>
+<p>To summarize the post, <code>dtplyr</code> helps convert your <code>dplyr</code> syntax to <code>data.table</code> equivalents, likely speeding up your processing. In a blog post by <a href="https://www.r-bloggers.com/does-using-dtplyr-make-sense-for-all-datasets/">Sebastian Wolf</a>, they found that in some testing scenariors, there are clear benefits to using <code>dtplyr</code> over <code>dplyr</code> when there are more than 10,000 rows. Not bad!</p>
+<p>Implementation is much simpler than one might imagine. Simply specify your dataset as a <code>lazy_dt()</code>, proceed with your normal <code>dplyr</code> wrangling, but end your piping with one of the following: <code>as.data.table()</code>, <code>as.data.frame()</code>, <code>as_tibble()</code>, <code>collect()</code>, or <code>pull()</code>.</p>
+<p>Here’s a quick example:</p>
+<style type="text/css">
+.standard {
+  background-color: lightgray;
+  font-weight: bold;
+  color:black
+}
+</style>
+<pre class="r standard"><code># Set as lazy_dt
+iris &lt;- lazy_dt(iris)
+
+# Conduct wrangling
+iris %&gt;%
+  filter(Species == &#39;setosa&#39;) %&gt;%
+  as.data.frame()</code></pre>
+<p>As you can see, the <strong>only</strong> two changes required are the <code>lazy_df()</code> call and the <code>as.data.frame()</code> specification at the end. For such simple work, is little to no reason not to incorporate this when datasets get larger.</p>
+</div>
+<div id="possible-concerns" class="section level2">
+<h2>Possible Concerns</h2>
+<p>A natural follow-up is what is the cost of using <code>dtyplr</code>. We will quickly summarize the content described in the <a href="https://www.tidyverse.org/blog/2019/11/dtplyr-1-0-0/">original blog post</a>.</p>
+<p>While this package does have the extra cost of translating the <code>dplyr</code> code to a <code>data.table</code> equivalent, it is often negligible <a href="https://dtplyr.tidyverse.org/">(under 1ms per dplyr call)</a>. Translation cost should not be concern.</p>
+<p>There are some additional overhead costs while using <code>mutate()</code>, and thus if issues arise, explore the <code>immutable</code> argument in the <code>lazy_df()</code> function.</p>
+<p>Additionally, not all functions within <code>data.table</code> are ported over to <code>dtplyr</code>, and thus one should still keep an eye on the original package if desired.</p>
+<p>Lastly, we do note that directly using <code>data.table</code> will provide a more optimal result, and so if speed is a priority, one may consider directly using <code>data.table</code> syntax.</p>
+</div>
+</div>
+<div id="dplyr-1.0.0-additions-to-watch" class="section level1">
+<h1>Dplyr 1.0.0 Additions To Watch</h1>
+<p><a href="https://www.tidyverse.org/blog/2020/03/dplyr-1-0-0-is-coming-soon/#:~:text=There%20are%20two%20important%20function,of%20any%20data%20masking%20verb.">Full post by Hadley Wickham.</a></p>
+<ul>
+<li><code>relocate()</code> - easily change the position of columns</li>
+<li><code>rowwise()</code> - enables you to mutate by rows instead of columns (also see <code>colwise()</code>). Additional information provided by <a href="https://www.tidyverse.org/blog/2020/04/dplyr-1-0-0-rowwise/">this blog post by Wickham</a>.</li>
+<li><code>nest_by()</code> - Similar to <code>group_by()</code>, but visibly makes a change to the data. Each group is now one row, and the data is collapsed into a list-col.</li>
+</ul>
+<p>Additionally, there is greater emphasis on the <code>across()</code> function, especially for use within the <code>rowwise()</code> and <code>summarise()</code> functions. The <code>across()</code> function enables you to apply a summary function to multiple columns, such as <code>summarise(across(where(is.numeric), mean)</code>, which calculates the mean of every numeric variable. Additionally, one can simply state all the variables, such as: <code>summarise(across(c('Var1', 'Var2'), mean))</code>, which would calculate the mean of the two specified variables.</p>
+<p>By using <code>across()</code>, we avoid needless repetition when trying to calculate the summary statistics of multiple variables.</p>
+</div>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         David Chen 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-167444525-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+    
+
+  </body>
+
+</html>

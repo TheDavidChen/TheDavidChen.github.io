@@ -6,10 +6,21 @@
     <description>Recent content on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R - Overview of v1.0.0 of dtplyr and dplyr</title>
+      <link>/post/r-dtplyr-dplyr/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/r-dtplyr-dplyr/</guid>
+      <description>In this post, we discuss v1.0.0 of the dtplyr package and some changes made in the v1.0.0 update of dplyr. This post essentially summarizes these two posts:
+dtplyr 1.0.0 - Hadley Wickhamdplyr 1.0.0 - Hadley WickhamAs these are two short, well-written posts, I highly recommend simply reading those two posts. If not, hopefully this post will inspire you to read them afterwards.
+DtplyrSummaryIf you prefer dplyr syntax over data.</description>
+    </item>
     
     <item>
       <title>R/Rstudio - Why Use Projects?</title>
