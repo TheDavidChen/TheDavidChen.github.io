@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="David Chen">
+    <meta name="description" content=".standard {background-color: lightgray;font-weight: bold;color:black}Three years ago I taught myself R to help process and visualize data for my research lab. Since then, I have easily spent hundreds, if not thousands of hours processing, modeling, visualizing, analyzing, tutoring, and struggling with the language. Even though I took multiple classes in Python, I never had the opportunity to explore matplotlib and pandas, the two packages that seem unanimous with Python for data analysis.">
+    <meta name="keywords" content="Statistics, modeling, visualization, viz, personal website, data">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python in RStudio (R Markdown)"/>
+<meta name="twitter:description" content=".standard {background-color: lightgray;font-weight: bold;color:black}Three years ago I taught myself R to help process and visualize data for my research lab. Since then, I have easily spent hundreds, if not thousands of hours processing, modeling, visualizing, analyzing, tutoring, and struggling with the language. Even though I took multiple classes in Python, I never had the opportunity to explore matplotlib and pandas, the two packages that seem unanimous with Python for data analysis."/>
+
+    <meta property="og:title" content="Python in RStudio (R Markdown)" />
+<meta property="og:description" content=".standard {background-color: lightgray;font-weight: bold;color:black}Three years ago I taught myself R to help process and visualize data for my research lab. Since then, I have easily spent hundreds, if not thousands of hours processing, modeling, visualizing, analyzing, tutoring, and struggling with the language. Even though I took multiple classes in Python, I never had the opportunity to explore matplotlib and pandas, the two packages that seem unanimous with Python for data analysis." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/python-in-rstudio-r-markdown/" />
+<meta property="article:published_time" content="2020-06-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-19T00:00:00+00:00" />
+
+
+    
+      <base href="/post/python-in-rstudio-r-markdown/">
+    
+    <title>
+  Python in RStudio (R Markdown) · David Chen
+</title>
+
+    
+      <link rel="canonical" href="/post/python-in-rstudio-r-markdown/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.e78e80fc3a585a4d1c8fc7f58623b6ff852411e38431a9cd1792877ecaa160f6.css" integrity="sha256-546A/DpYWk0cj8f1hiO2/4UkEeOEManNF5KHfsqhYPY=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.70.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      
+
+
+
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Chen
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/post/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/projects/">Upcoming Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Python in RStudio (R Markdown)</h1>
+      
+    </header>
+
+    
+
+
+<style type="text/css">
+.standard {
+  background-color: lightgray;
+  font-weight: bold;
+  color:black
+}
+</style>
+<p>Three years ago I taught myself R to help process and visualize data for my research lab. Since then, I have easily spent hundreds, if not thousands of hours processing, modeling, visualizing, analyzing, tutoring, and struggling with the language. Even though I took multiple classes in Python, I never had the opportunity to explore <code>matplotlib</code> and <code>pandas</code>, the two packages that seem unanimous with Python for data analysis.</p>
+<p>This will make the first post out of a series of three.</p>
+<p>The first post (this one) will explore the basics and fundamentals of data wrangling and visualization in Python.</p>
+<p>The second post sill attempt to reproduce a relatively complex analysis and visualization previously made in R.</p>
+<p>The third post will be designed to help other R users transition to Python.</p>
+<p>Let’s begin!</p>
+<div id="finding-resources" class="section level1">
+<h1>Finding Resources</h1>
+<p><em>Note: We are using Python 3.8.1.</em></p>
+<p>First and foremost, we look for some free resources. After searching for “Python for R users” and “Data science in Python for R users,” we find the following resources:</p>
+<ul>
+<li><a href="http://mathesaurus.sourceforge.net/r-numpy.html">Comparison of R and Python functions</a></li>
+<li><a href="https://paulvanderlaken.com/2019/07/29/python-for-r-users/">Python for R Users by Mango Solutions</a></li>
+<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook by Jake VanderPlas</a></li>
+<li><a href="https://www.inferentialthinking.com/chapters/intro.html">Computational and Inferential Thinking: The Foundations of Data Science by Ani Adhikari and John DeNero</a></li>
+</ul>
+<p>Additionally, we want to follow a style guide from the start. <a href="http://google.github.io/styleguide/pyguide.html">Google has a style guide</a>, so we will proceed forward with that.</p>
+</div>
+<div id="initial-scans" class="section level1">
+<h1>Initial Scans</h1>
+<p>Next, we will scan through all the resources to develop a baseline and determine which we want to put most of our focus on.</p>
+<p>From the functions comparisons, we note the differences for indexing. The rest we will learn as necessary.</p>
+<div id="mango-solutions-workshop" class="section level2">
+<h2>Mango Solutions Workshop</h2>
+<p>Examining the github repo, the materials do seem to align with our goals. While typically I use PyCharm for Python programming, we will stick with RStudio for the sake of these posts.</p>
+<div id="packages" class="section level3">
+<h3>Packages</h3>
+<p>First, we note that instead of <code>library()</code>, we will use <code>import ____</code> to load in packages. Additionally, to use functions from these called modules, we will have to specify the module name in front of the function (e.g. <code>math.sin()</code> instead of <code>sin()</code>).</p>
+<p>To install the packages, there is no <code>install.packages()</code> equivalent. Thus, we head to the Terminal section of RStudio and enter <code>pip list</code> to check what packages we already have. It seems that while I have <code>pandas</code> already installed, I want to install <code>matplotlib</code> and <code>numpy</code> for the future, so I run <code>pip install matplotlib</code> and <code>pip install numpy</code>.</p>
+<pre class="python standard"><code>import numpy as np
+import pandas as pd
+import matplotlib</code></pre>
+<p>Perfect, all the packages have imported properly, we can proceed forwards!</p>
+</div>
+<div id="initial-data-exploration" class="section level3">
+<h3>Initial Data Exploration</h3>
+<p>Now onto data processing. Since reading in a csv file gets complicated on this website, I will use an in-built dataset. After a quick search, we find <a href="https://python-data-science.readthedocs.io/en/latest/datasets.html">documentation</a> for the <code>sklearn</code> library, which discusses many datasets that are shared with R, including <code>iris</code>.</p>
+<p>After running <code>pip install statsmodels</code> in the terminal, we can now do the following:</p>
+<pre class="python standard"><code>from sklearn.datasets import load_iris
+iris_raw = load_iris()
+
+# Load iris into a dataframe and set the field names
+iris = pd.DataFrame(iris_raw[&#39;data&#39;], columns=iris_raw[&#39;feature_names&#39;])</code></pre>
+<p>Here, we used the <code>pandas</code> library to convert the data into a data frame, then printed the first few rows. While I’m not entirely clear how the DataFrame function works, I’m certain we’ll get to that shortly.</p>
+<p>Now that we have a dataset, we return to the workshop materials.</p>
+<p>With a dataset on hand, we explore the basic functions that we’re familiar with for R.</p>
+<ul>
+<li><code>head()</code> = <code>.head()</code></li>
+<li><code>tail()</code> = <code>.tail()</code></li>
+<li><code>summary()</code> = <code>.describe()</code></li>
+<li><code>names()</code> = <code>.columns</code></li>
+<li><code>dim()</code> = <code>.shape</code></li>
+</ul>
+<pre class="python standard"><code>iris.head(3)</code></pre>
+<pre><code>##    sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)
+## 0                5.1               3.5                1.4               0.2
+## 1                4.9               3.0                1.4               0.2
+## 2                4.7               3.2                1.3               0.2</code></pre>
+<p>Alright, perfect. The functions do have arguments like in R (e.g. <code>iris.head(3)</code> to get 3 rows only), but again, we can learn those as we go.</p>
+</div>
+<div id="data-manipulation" class="section level3">
+<h3>Data Manipulation</h3>
+<p>Next, we want to learn about all the data wrangling abilities we had with the <code>dplyr</code> function in R. From the workshop notes, we’ll continue to use <code>pandas</code> for now.</p>
+<p>First, we observe that instead of using <code>$</code> to specify variables, we have to index with <code>[]</code>. Instead of using a vector (<code>c('var1', 'var2')</code>) to store multiple column names and call them together, here we will have to use a list (<code>['var1', 'var2']</code>).</p>
+<p>Creation of a new variable seems to be the same as in base R. For example, instead of <code>df$new = df$var1 + df$var2</code>, we will do <code>df['new'] = df['var1'] / df['var2']</code>. Seems straightforward enough!</p>
+<p>Several functions are also listed:</p>
+<ul>
+<li><code>filter()</code> = <code>.query()</code></li>
+<li><code>sort()</code> = <code>.sort_values()</code></li>
+<li><code>rename()</code> = <code>.rename()</code></li>
+<li><code>summarize()</code> = <code>.agg()</code></li>
+<li><code>group_by()</code> = <code>.groupby()</code></li>
+<li><code>is.null()</code> = <code>isnull()</code></li>
+</ul>
+<p>Let’s give the filter and summarize functions a try!</p>
+<pre class="python"><code>iris_red = iris.query(&quot;sepal length (cm) &gt; 5.0&quot;)</code></pre>
+<p>We’ve run into our first error! Turns out query requires no empty spaces in variable names, so after a quick fix, we can proceed onwards.</p>
+<pre class="python standard"><code># Change the column names to remove spaces
+iris.columns = [&quot;sepal_length&quot;, &quot;sepal_width&quot;, &quot;petal_length&quot;, &quot;petal_width&quot;] 
+
+# Filter for sepal lengths at least 5 cm long
+iris_red = iris.query(&quot;sepal_length &gt; 5.0&quot;)
+iris_red.head(3)</code></pre>
+<pre><code>##     sepal_length  sepal_width  petal_length  petal_width
+## 0            5.1          3.5           1.4          0.2
+## 5            5.4          3.9           1.7          0.4
+## 10           5.4          3.7           1.5          0.2</code></pre>
+<p>Seems like the filter function is working as intended. We do note that the query argument is a bit less intuitive than for <code>filter()</code>, but nevertheless, it is manageable.</p>
+<p>Next, we want to try the <code>summarize()</code> equivalent.</p>
+<pre class="python standard"><code># Calculate mean of sepal length and median of sepal width
+iris.agg({&quot;sepal_length&quot; : np.mean, &quot;sepal_width&quot; : np.median})</code></pre>
+<pre><code>## sepal_length    5.843333
+## sepal_width     3.000000
+## dtype: float64</code></pre>
+<pre class="python standard"><code># Calculate min and max values of all the variables
+iris.agg([&#39;min&#39;, &#39;max&#39;])</code></pre>
+<pre><code>##      sepal_length  sepal_width  petal_length  petal_width
+## min           4.3          2.0           1.0          0.1
+## max           7.9          4.4           6.9          2.5</code></pre>
+<p>This will require some getting used to. The <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.agg.html">documentation for .agg</a> discusses other arguments and options, but this gives us an idea of what we’re dealing with.</p>
+<p>Now, we know the <code>select()</code>, <code>mutate()</code>, <code>summarize()</code>, and <code>group_by()</code> equivalents. I consider these the fundamental functions, so things are looking good!</p>
+</div>
+<div id="visualization" class="section level3">
+<h3>Visualization</h3>
+<p>Onto <a href="https://github.com/MangoTheCat/python-for-r-users-workshop/blob/master/1-04_Visualisation.ipynb">section 4 of the workshop</a>!</p>
+<p>This workshop uses the <code>seaborn</code> library, so we will use that for now since it supposedly closer to <code>ggplot2</code>. We will explore <code>matplotlib</code> at another time.</p>
+<p>Our goal will be to explore the basic plots, axis/title labeling, faceting, and coloring.</p>
+<pre class="python standard"><code>import seaborn as sns
+
+# We need to import this to show the plot
+import matplotlib.pyplot as plt
+
+# Create Petal Length vs Sepal Length scatterplot with regression line
+sns.lmplot(x=&quot;sepal_length&quot;, y = &quot;petal_length&quot;, data = iris)</code></pre>
+<pre class="python standard"><code>plt.xlabel(&#39;Sepal Length&#39;)
+plt.ylabel(&#39;Petal Length&#39;)
+
+# Display the plot (required for R Markdown to show)
+plt.show()</code></pre>
+<p><img src="/post/2020-06-19-python-in-rstudio-r-markdown_files/figure-html/unnamed-chunk-9-1.png" width="480" /></p>
+<p>The code seems to be more akin to base graphics in R. Regardless, it seems to be working appropriately. Next, we review how to facet these graphs.</p>
+<p>The <code>iris</code> dataset here doesn’t actually have a species name variable, so we create a categorical variable to fill that need.</p>
+<p>After exploring different options to create the new variable efficiently, we explore the <code>.insert()</code> function. Since iris has 150 rows, we create a categorical variable with 2 unique values (75 rows each).</p>
+<pre class="python standard"><code># Create the species variable which switches between Setosa and Virginica
+iris[&quot;species&quot;] = [&#39;Setosa&#39;, &#39;Virginica&#39;]*75
+iris.head(3)</code></pre>
+<pre><code>##    sepal_length  sepal_width  petal_length  petal_width    species
+## 0           5.1          3.5           1.4          0.2     Setosa
+## 1           4.9          3.0           1.4          0.2  Virginica
+## 2           4.7          3.2           1.3          0.2     Setosa</code></pre>
+<p>It is successful! So, we now create the faceted graph.</p>
+<pre class="python standard"><code># Create Petal Length vs Sepal Length faceted graph with regression line
+sns.lmplot(x=&quot;sepal_length&quot;, y = &quot;petal_length&quot;, 
+           col = &quot;species&quot;, hue = &#39;species&#39;, data = iris)</code></pre>
+<pre class="python standard"><code>plt.xlabel(&#39;Sepal Length&#39;)
+plt.ylabel(&#39;Petal Length&#39;)
+
+# Display the plot (required for R Markdown to show)
+plt.show()</code></pre>
+<p><img src="/post/2020-06-19-python-in-rstudio-r-markdown_files/figure-html/unnamed-chunk-11-1.png" width="960" /></p>
+<p>It works! While I have no doubt that eventually there will a struggle to figure out details like font size, text labeling, this seems like a great point to stop when there isn’t a definitive end goal in mind. We will continue to explore plotting in our next post on this subject.</p>
+</div>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>That will conclude our exploration for now; we will explore the remaining two books and the style guide as we take on larger projects.</p>
+<p>Overall, I’m fairly happy with the progress. It seems like a lot of the functions we used were extremely similar to that of base R. Perhaps there are packages that are more similar to <code>dplyr</code>/<code>tidyverse</code>, but it’s always great to learn new syntax and ways and thinking about data.</p>
+<p>In the ~3 hours that it took to scan the materials and create this post, I feel fairly confident in my ability to learn how to conduct analyses in Python. In part two, we will attempt to take on an actual project, and see if that confidence lasts or not.</p>
+</div>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         David Chen 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-167444525-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+    
+
+  </body>
+
+</html>

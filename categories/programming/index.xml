@@ -6,10 +6,19 @@
     <description>Recent content in Programming on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python Exploration - First Introduction</title>
+      <link>/post/python-exploration-first-introduction/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/python-exploration-first-introduction/</guid>
+      <description>.standard {background-color: lightgray;font-weight: bold;color:black}Three years ago I taught myself R to help process and visualize data for my research lab. Since then, I have easily spent hundreds, if not a thousand plus hours processing, modeling, visualizing, analyzing, tutoring, and struggling with the language. Even though I took multiple classes in Python, I never had the opportunity to explore matplotlib and pandas, the two packages that seem unanimous with Python for data analysis.</description>
+    </item>
     
     <item>
       <title>R - Overview of v1.0.0 of dtplyr and dplyr</title>
