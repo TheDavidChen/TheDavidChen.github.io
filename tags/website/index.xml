@@ -23,7 +23,7 @@ For this post, we’ll make some small, yet meaningful quality of life improveme
     </item>
     
     <item>
-      <title>Website - Highlighting Code Chunks</title>
+      <title>Website Development - Highlighting Code Chunks</title>
       <link>/post/website-highlighting-code-chunks/</link>
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -33,7 +33,7 @@ Whenever we need to include functional R code, whether it’s to check the outpu
     </item>
     
     <item>
-      <title>Website Updates - Google Analytics and Dark Mode (WIP)</title>
+      <title>Website Development - Google Analytics and Dark Mode (WIP)</title>
       <link>/post/website-updates-google-analytics-dark-mode/</link>
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
@@ -43,7 +43,7 @@ Whenever we need to include functional R code, whether it’s to check the outpu
     </item>
     
     <item>
-      <title>Website Creation</title>
+      <title>Website Development - Initial Creation with Blogdown</title>
       <link>/post/website-creation/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
