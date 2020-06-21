@@ -38,11 +38,8 @@ Why Use It?In my opinion, there are four fundamental reasons why you should use
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/website-highlighting-code-chunks/</guid>
-      <description>Work in progress!
-Whenever we need to include functional R code, whether it’s to check the output or just see how it was written, we include code chunks. Yet, currently on this website, it is extremely difficult to differentiate from the normal text.
-Prior to this post, code chunks would appear like the following:
-Figure 1 - Code chunk that has no color differentiation
-There are three primary issues here.</description>
+      <description>June 20th Edit: R Code Chunks were updated throughout the website automatically, so the coloring is slightly different. This post is maintained to show another way of changing the chunk features.
+Whenever we need to include functional R code, whether it’s to check the output or just see how it was written, we include code chunks. Yet, currently on this website, it is extremely difficult to differentiate from the normal text.</description>
     </item>
     
     <item>

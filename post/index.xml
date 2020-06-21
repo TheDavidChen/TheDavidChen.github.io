@@ -6,10 +6,32 @@
     <description>Recent content in Posts on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Website Development - Date Posted and Chunk Coloring</title>
+      <link>/post/website-development-date-posted-chunk-coloring/</link>
+      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/website-development-date-posted-chunk-coloring/</guid>
+      <description>WIP - we are still actively working on making the chunks more elegant.
+Website improvements. While on one hand I want to switch to a theme more compatible with blogdown and R, I really like the overall theme. For now, we’ll treat this as an exercise in HTML, CSS, and JS.
+For this post, we’ll make some small, yet meaningful quality of life improvements to our website. First, we’ll add the date posted for each post, and then fix the coloring of R code chunks.</description>
+    </item>
+    
+    <item>
+      <title>Website Development - Date Posted and Chunk Coloring</title>
+      <link>/post/website-development-date-posted-chunk-coloring/</link>
+      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/website-development-date-posted-chunk-coloring/</guid>
+      <description>WIP - we are still actively working on making the chunks more elegant.
+Website improvements. While on one hand I want to switch to a theme more compatible with blogdown and R, I really like the overall theme. For now, we’ll treat this as an exercise in HTML, CSS, and JS.
+For this post, we’ll make some small, yet meaningful quality of life improvements to our website. First, we’ll add the date posted for each post, and then fix the coloring of R code chunks.</description>
+    </item>
     
     <item>
       <title>Python Exploration - First Introduction</title>
@@ -47,11 +69,8 @@ Why Use It?In my opinion, there are four fundamental reasons why you should use
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/website-highlighting-code-chunks/</guid>
-      <description>Work in progress!
-Whenever we need to include functional R code, whether it’s to check the output or just see how it was written, we include code chunks. Yet, currently on this website, it is extremely difficult to differentiate from the normal text.
-Prior to this post, code chunks would appear like the following:
-Figure 1 - Code chunk that has no color differentiation
-There are three primary issues here.</description>
+      <description>June 20th Edit: R Code Chunks were updated throughout the website automatically, so the coloring is slightly different. This post is maintained to show another way of changing the chunk features.
+Whenever we need to include functional R code, whether it’s to check the output or just see how it was written, we include code chunks. Yet, currently on this website, it is extremely difficult to differentiate from the normal text.</description>
     </item>
     
     <item>
