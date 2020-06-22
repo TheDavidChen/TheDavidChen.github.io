@@ -17,7 +17,8 @@
       <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/python-exploration-first-introduction/</guid>
-      <description>.standard {background-color: lightgray;font-weight: bold;color:black}Three years ago I taught myself R to help process and visualize data for my research lab. Since then, I have easily spent hundreds, if not a thousand plus hours processing, modeling, visualizing, analyzing, tutoring, and struggling with the language. Even though I took multiple classes in Python, I never had the opportunity to explore matplotlib and pandas, the two packages that seem unanimous with Python for data analysis.</description>
+      <description>Note: Currently code chunks look better on desktop. We’re actively working on mobile support!
+.standard {background-color: #f5f5f5;border: 1px solid #ccc;display: block;padding: 9.5px;margin: 0 0 10px;font-size: 13px;line-height: 1.42857143;word-break: break-all;word-wrap: break-word;color: black;width: 100%;}Three years ago I taught myself R to help process and visualize data for my research lab. Since then, I have easily spent hundreds, if not a thousand plus hours processing, modeling, visualizing, analyzing, tutoring, and struggling with the language.</description>
     </item>
     
     <item>
