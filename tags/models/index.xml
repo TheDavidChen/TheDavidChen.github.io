@@ -6,10 +6,23 @@
     <description>Recent content in Models on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/models/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gaussian Process</title>
+      <link>/post/gaussian-process/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/gaussian-process/</guid>
+      <description>Resources(ML 19.1) Gaussian processes - definition and first examples by mathematicalmonk
+The Gaussian Process Summer School from the University of Sheffield
+Gaussian Processes - CMU Lecture Notes
+Introduction to Gaussian Processes by Collin Erickson
+</description>
+    </item>
     
     <item>
       <title>Time Series - AR(1) Introduction</title>

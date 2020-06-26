@@ -6,10 +6,34 @@
     <description>Recent content in Posts on David Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Interpret Confidence Intervals</title>
+      <link>/post/confidence-interval-interpretation/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/confidence-interval-interpretation/</guid>
+      <description>How do you interpret a confidence interval?
+If you look online, there are many resources that are technically inaccurate. If you search for any of the following:
+What is a confidence intervalWhat does a confidence interval tell youWhat is a confidence interval in simple termsWhat does 95% confidence level meanChances are the first few results are wrong. I spent years trying to find a simple, yet accurate explanation, and couldn’t find much.</description>
+    </item>
+    
+    <item>
+      <title>Gaussian Process</title>
+      <link>/post/gaussian-process/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/gaussian-process/</guid>
+      <description>Resources(ML 19.1) Gaussian processes - definition and first examples by mathematicalmonk
+The Gaussian Process Summer School from the University of Sheffield
+Gaussian Processes - CMU Lecture Notes
+Introduction to Gaussian Processes by Collin Erickson
+</description>
+    </item>
     
     <item>
       <title>Website Development - Date Posted and Chunk Coloring</title>
