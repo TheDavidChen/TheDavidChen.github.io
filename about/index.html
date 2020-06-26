@@ -136,6 +136,34 @@
 </section>
 
   
+  
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//DavidStatBlog.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
 
       </div>
 
@@ -174,15 +202,6 @@ if (!doNotTrack) {
 
 
 
-
-
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-
-<script>
-hljs.configure({languages: []});
-hljs.initHighlightingOnLoad();
-</script>
     </main>
 
     
