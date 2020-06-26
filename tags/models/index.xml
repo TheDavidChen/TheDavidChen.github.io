@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>Gaussian Process</title>
+      <title>(WIP) - Gaussian Process</title>
       <link>/post/gaussian-process/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/gaussian-process/</guid>
-      <description>Resources(ML 19.1) Gaussian processes - definition and first examples by mathematicalmonk
+      <description>This is a work in process. This post will be updated when I am comfortable with writing a description.
+Resources(ML 19.1) Gaussian processes - definition and first examples by mathematicalmonk
 The Gaussian Process Summer School from the University of Sheffield
 Gaussian Processes - CMU Lecture Notes
 Introduction to Gaussian Processes by Collin Erickson
