@@ -65,23 +65,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>Challenge</title>
-      <link>/tags/challenge/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/challenge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>General</title>
-      <link>/tags/general/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/general/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
